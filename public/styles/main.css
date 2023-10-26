@@ -116,7 +116,6 @@ footer {
     padding-right:50px ;
 }
 .Content-Appreciation-Text{
-    
     display: inline-block;
     text-align: center;
     width: 50%;
@@ -133,21 +132,81 @@ footer {
 }
 hr{
     clear: both;
-
+    margin: 0rem;
 }
-.Instructor-Appreciation-Text{
-    clear: right;
+.Instructor-Appreciation {
+    padding-left: 100px;
+    padding-top: 30px;
+}
+.Instructor-Appreciation-Text {
+    clear: both;
+    float: left;
+    padding-left: 80px;
     width: 40%;
-    display: inline-block;
     text-align: center;
     padding-top: 40px;
 }
-.Instructor-Appreciation-Image{
-    padding-left: 50px;
+.Instructor-Appreciation-Image {
+    padding-left: 60px;
     height: 400px;
-    
+}
+.intro-img{
+    height: 50vh;
+}
+.intro-container{
+    position: relative;
+    text-align: center;
+}
+.Content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.about-us-Text{
+    display: inline-block;
+    width: 50%;
+    padding: 100px;
+}
+.about-us-Image{
+    clear:right;
+    float: left;
+    height: 400px;
+    padding: 50px;
+}
+.about-us-container{
+    padding-left:100px;
+}
+.Mission-container {
+    background-color: #E7EFF6;
+    padding-left: 100px;
+    padding-top: 30px;
+}
+.Mission-container-Text {
+    clear: both;
+    float: left;
+    padding-left: 80px;
+    width: 40%;
+    padding-top: 40px;
+}
+.Mission-container-Image {
+    padding-left: 60px;
+    height: 340px;
+}
+.mentor-Text{
+    display: inline-block;
+    width: 50%;
+    padding: 100px;
+}
+.mentor-Image{
+    clear:right;
+    float: left;
+    height: 500px;
+    padding: 50px;
+}
+.mentor-container{
+    padding-left:100px;
 }
 
-    margin: 0rem;
-}
+
 

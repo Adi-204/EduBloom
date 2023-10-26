@@ -58,6 +58,10 @@ app.get('/sessions',(req,res)=>{
     res.render('sessions');
 });
 
+app.get('/about',(req,res)=>{
+    res.render('about');
+});
+
 app.post('/signin', passport.authenticate('local', {
     successRedirect: '/', 
     failureRedirect: '/signin',
