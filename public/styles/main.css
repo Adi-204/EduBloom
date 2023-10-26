@@ -13,6 +13,7 @@
 .nav{
     display: flex;
     justify-content: space-between;
+    height: 63px;
 }
 .nav-items{
     display: flex;
@@ -28,10 +29,13 @@
 .nav-items li a{
     text-decoration: none;
 }
-
-h2 {
+.sign{
+    font-family: Archia,sans-serif;
     text-align: center;
-    color: #333;
+    font-size: 40px;
+    font-weight: 700;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 form {
     max-width: 400px;
@@ -42,7 +46,6 @@ form {
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-
 label {
     display: block;
     font-weight: bold;
@@ -58,9 +61,12 @@ input[type="password"] {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+.form-container{
+    text-align: center;
+}
 
 button[type="submit"] {
-    background-color: #333;
+    background-color: #3498db;
     color: #fff;
     padding: 10px 20px;
     margin-top: 10px;
