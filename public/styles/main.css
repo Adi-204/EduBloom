@@ -1,0 +1,44 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.app {
+    padding: 15px;
+    padding-left: 50px;
+    font-size: 35px;
+}
+.app a{
+    text-decoration: none;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+.nav-items{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 30px;
+    font-size: 20px;
+    padding-top: 10px;
+}
+.nav-items li{
+    list-style: none;
+    padding: 15px;
+}
+.nav-items li a{
+    text-decoration: none;
+}
+h2 {
+    text-align: center;
+    color: #333;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
