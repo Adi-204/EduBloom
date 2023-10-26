@@ -124,3 +124,15 @@ footer {
 hr{
     clear: both;
 }
+.Instructor-Appreciation-Text{
+    clear: right;
+    width: 40%;
+    display: inline-block;
+    text-align: center;
+    padding-top: 40px;
+}
+.Instructor-Appreciation-Image{
+    padding-left: 50px;
+    height: 400px;
+    
+}
