@@ -28,6 +28,7 @@
 .nav-items li a{
     text-decoration: none;
 }
+
 h2 {
     text-align: center;
     color: #333;
@@ -67,6 +68,7 @@ button[type="submit"] {
     border-radius: 5px;
     cursor: pointer;
 }
+
 footer {
     background-color: #333;
     color: #fff;
@@ -77,4 +79,14 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.First-Block-Content{
+    display: inline;
+}
+#First-Block-image{
+    float: right;
+    height: 300px;
+}
+
+
 
