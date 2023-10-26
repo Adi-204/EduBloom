@@ -28,10 +28,7 @@
 .nav-items li a{
     text-decoration: none;
 }
-h2 {
-    text-align: center;
-    color: #333;
-}
+
 footer {
     background-color: #333;
     color: #fff;
@@ -41,4 +38,11 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
+}
+.First-Block-Content{
+    display: inline;
+}
+#First-Block-image{
+    float: right;
+    height: 300px;
 }
