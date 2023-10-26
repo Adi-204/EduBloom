@@ -1,7 +1,13 @@
 *{
     padding: 0;
     margin: 0;
+    font-family: sans-serif;
+    
 }
+body{
+    background-color: whitesmoke;
+}
+
 .app {
     padding: 15px;
     padding-left: 50px;
@@ -13,6 +19,7 @@
 .nav{
     display: flex;
     justify-content: space-between;
+    background-color: white;
 }
 .nav-items{
     display: flex;
@@ -29,10 +36,7 @@
     text-decoration: none;
 }
 
-h2 {
-    text-align: center;
-    color: #333;
-}
+
 form {
     max-width: 400px;
     margin: 0 auto;
@@ -81,12 +85,31 @@ footer {
 }
 
 .First-Block-Content{
-    display: inline;
+    text-align: center;
+    display: inline-block;
+    padding:50px;
 }
 #First-Block-image{
     float: right;
     height: 300px;
+    padding-right:50px ;
 }
-
-
-
+.Content-Appreciation-Text{
+    
+    display: inline-block;
+    text-align: center;
+    width: 50%;
+    padding: 100px;
+}
+.Content-Appreciation-Image{
+    clear:right;
+    float: left;
+    height: 400px;
+    padding: 50px;
+}
+.Content-Appreciation{
+    padding-left:200px;
+}
+hr{
+    clear: both;
+}
