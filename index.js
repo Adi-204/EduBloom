@@ -22,7 +22,6 @@ const sessionSchema = new mongoose.Schema({
     speaker_details: String,
 });
 
-
 const Session = mongoose.model('Session', sessionSchema);
 
 const videoSchema = new mongoose.Schema({
@@ -31,6 +30,14 @@ const videoSchema = new mongoose.Schema({
 });
 
 const Video = mongoose.model('Video', videoSchema);
+
+const registrationSchema = new mongoose.Schema({
+    fname: String,
+    lname:String,
+    email: String,
+});
+
+const Registration = mongoose.model('Registration', registrationSchema);
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -63,7 +70,9 @@ app.get('/',(req,res)=>{
 app.get('/courses',(req,res)=>{
     res.render('courses');
 });
-
+app.get('/webregister',(req,res)=>{
+    res.render('webregister')
+});
 app.get('/DME',async (req,res)=>{
     const course_name = "Digital Marketing for Educators";
     try {
@@ -134,9 +143,10 @@ app.get('/signup',(req,res)=>{
 });
 
 app.get('/sessions', async (req, res) => {
+    const registered = req.query.registered === 'true';
     try {
         const sessions = await Session.find({});
-        res.render('sessions', { arr: sessions });
+        res.render('sessions', { arr: sessions, registered});
     } catch (err) {
         console.error('Error retrieving sessions:', err);
         res.status(500).send('Error retrieving sessions');
@@ -146,7 +156,20 @@ app.get('/sessions', async (req, res) => {
 app.get('/about',(req,res)=>{
     res.render('about');
 });
-
+app.post('/webform',async (req,res)=>{
+    const { fname,lname,email } = req.body;
+    try {
+        const registration = new Registration({
+            fname,
+            lname,
+            email
+        });
+        await registration.save();
+        res.redirect('/sessions?registered=true');
+    } catch (error) {
+        console.error(error);
+    }
+});
 app.post('/process-filter', async (req, res) => {
     const modeFilter = req.body.mode;
     try {

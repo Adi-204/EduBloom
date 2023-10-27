@@ -24,6 +24,15 @@
             <input type="submit" value="Submit" class="btn">
         </form>
     </section>
+    <% if (registered) { %>
+        <div class="overlay active" id="overlay"></div>
+        <div class="popup active" id="popup">
+            <div class="popup-content">
+                <p>You have successfully registered!</p>
+            </div>
+            <button class="btn" onclick="window.location.href='/sessions'">Close</button>
+        </div>
+    <% } %>    
     </div>
         <% for(var i=0;i<arr.length-1;i+=2){ %>
             <div class="session-filter">
@@ -36,6 +45,7 @@
                     <p><strong>Duration:</strong> <%= arr[i].duration %></p>
                     <p><strong>Session Topic:</strong> <%= arr[i].speaker %></p>
                     <p><strong>Speaker details:</strong> <%= arr[i].speaker_details %></p>
+                    <button class="btn" onclick="window.location.href='/webregister'">Enroll Now</button>
                 </div>
             </div>
             <div class="card">
@@ -47,6 +57,7 @@
                     <p><strong>Duration:</strong> <%= arr[i+1].duration %></p>
                     <p><strong>Session Topic:</strong> <%= arr[i+1].speaker %></p>
                     <p><strong>Speaker details:</strong> <%= arr[i+1].speaker_details %></p>
+                    <button class="btn" onclick="window.location.href='/webregister'">Enroll Now</button>
                 </div>
             </div>
         </div>

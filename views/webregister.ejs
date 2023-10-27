@@ -1,0 +1,20 @@
+<%- include('partials/header.ejs') %>
+
+<img style="z-index: -1;"
+src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&q=80&w=1632&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+<div class="signcontainer">
+    <h2 class="sign">Register</h2>
+    <form class="sign-form" action="/webform" method="post">
+        <label for="username">First-Name</label>
+        <input type="text" id="username" name="fname" required><br><br>
+        <label for="username">Last-Name</label>
+        <input type="text" id="username" name="lname" required><br><br>
+        <label for="username">Email</label>
+        <input type="text" id="username" name="email" required><br><br>
+        <label for="username">Contact no.</label>
+        <input type="tel" id="username" name="contact" required><br><br>
+        <div class="form-container"><button type="submit">Submit</button></div>
+    </form>
+</div>
+
+<%- include('partials/footer.ejs') %>
