@@ -90,7 +90,7 @@ button[type="submit"] {
     padding: 10px 20px;
     margin-top: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
     cursor: pointer;
 }
 
@@ -99,9 +99,8 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
+    
+    
     width: 100%;
 }
 
@@ -208,5 +207,85 @@ hr{
     padding-left:100px;
 }
 
+.USP-Text{
+    display: inline-block;
+    text-align: center;
+    width: 50%;
+    padding-left: 30px;
+    
+}
+.USP-Image{
+    clear:right;
+    float: left;
+    height: 300px;
+    /* padding; */
+}
+.USP{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+.USP-Text h2{
+    font-size: 24px;
+}
+.USP-Text p{
+    font-size: 18px;
+}
+.Testimonials{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 30px;
+}
+.Testimonial-1{
+    padding: 30px;
+    width: 30%;
+    border: 2px solid black;
+    
+}
+.T-Name{
+    text-align: right;
+}
+.Testimonials-block h2{
+    padding-left: 35px;
+}
+.Testimonials-block{
+    background-color: #cfcedd;
+}
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+}
+.fblock1{
+    width:40%;
+
+}
+.fblock2{
+    width: 25%;
+}
+.fblock3{
+    width: 25%;
+}
+.footer h2,p{
+    text-align: left;
+}
+.footer li{
+    list-style-type:none ;
+    text-align: left;
+}
+.USP-Remove{
+    text-align: left;
+}
+#Homebutton{
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#Homebutton:hover {
+    background-color: #1d6fa5; /* Darker shade of blue on hover */
+}
 
 
