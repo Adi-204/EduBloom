@@ -119,7 +119,7 @@ app.get('/Chatgpt',async (req,res)=>{
     const course_name = "ChatGPT and AI tools";
     try {
         const videos = await Video.find({title : course_name});
-        res.render('Gamification', { v:videos,auth:req.isAuthenticated() });
+        res.render('Chatgpt', { v:videos,auth:req.isAuthenticated() });
     } catch (error) {
         console.error(error);
         res.status(500).send('Error retrieving videos');
