@@ -111,6 +111,7 @@ footer {
     float: right;
     height: 300px;
     padding-right:50px ;
+    padding-top: 20px;
 }
 .Content-Appreciation-Text{
     display: inline-block;
@@ -331,13 +332,15 @@ hr{
     width: 40%;
     
     border:2px solid black ;
+    background-color: #232D3F;
+    border-radius: 15px;
     
 }
 .P-image{
     display:flex;
     justify-content: center;
     align-items: center;
-    
+    padding-bottom: 15px;
 }
 .P-Name{
     text-align: center;
@@ -348,9 +351,11 @@ hr{
 .C-Name{
     
     text-align: center;
+    padding-top: 10px;
 }
 .course1>p{
     text-align: center;
+    color: white;
     
 }
 
@@ -368,7 +373,19 @@ hr{
     justify-content: center;
     align-items: center;
 }
+#Copyright{
+    text-align: center;
+    margin-bottom: 0px;
+}
+.course1 a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+
 .session-filter{
     display: flex;
     justify-content: space-evenly;
 }
+
