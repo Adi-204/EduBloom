@@ -25,6 +25,13 @@ const sessionSchema = new mongoose.Schema({
 
 const Session = mongoose.model('Session', sessionSchema);
 
+const videoSchema = new mongoose.Schema({
+    title: String,
+    url: String,
+});
+
+const Video = mongoose.model('Video', videoSchema);
+
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
@@ -50,15 +57,74 @@ passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-
 app.get('/',(req,res)=>{
     res.render('home');
 });
-
 app.get('/courses',(req,res)=>{
     res.render('courses');
 });
 
+app.get('/DME',async (req,res)=>{
+    const course_name = "Digital Marketing for Educators";
+    try {
+        const videos = await Video.find({title : course_name});
+        res.render('DME', { v:videos });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error retrieving videos');
+    }
+});
+
+app.get('/A_to_z',async (req,res)=>{
+    const course_name = "Reach the zenith of 21st century educators";
+    try {
+        const videos = await Video.find({title : course_name});
+        res.render('A_to_z', { v:videos });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error retrieving videos');
+    }
+});
+app.get('/Gamification',async (req,res)=>{
+    const course_name = "Gamification in Education";
+    try {
+        const videos = await Video.find({title : course_name});
+        res.render('Gamification', { v:videos });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error retrieving videos');
+    }
+});
+app.get('/Innovative',async (req,res)=>{
+    const course_name = "Innovative Teaching Practices";
+    try {
+        const videos = await Video.find({title : course_name});
+        res.render('Innovative', { v:videos });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error retrieving videos');
+    }
+});
+app.get('/Chatgpt',async (req,res)=>{
+    const course_name = "ChatGPT and AI tools";
+    try {
+        const videos = await Video.find({title : course_name});
+        res.render('Gamification', { v:videos });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error retrieving videos');
+    }
+});
+app.get('/SEO',async (req,res)=>{
+    const course_name = "Search Engine Optimization";
+    try {
+        const videos = await Video.find({title : course_name});
+        res.render('SEO', { v:videos });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error retrieving videos');
+    }
+});
 app.get('/signin',(req,res)=>{
     res.render('signin');
 });

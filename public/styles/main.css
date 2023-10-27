@@ -223,12 +223,10 @@ hr{
     display: flex;
     justify-content: center;
     margin: 50px;
+    padding-top: 10px;
 }
 .USP-Text h2{
-    font-size: 24px;
-}
-.USP-Text p{
-    font-size: 18px;
+    padding-top: 5px;
 }
 .Testimonials{
     display: flex;
