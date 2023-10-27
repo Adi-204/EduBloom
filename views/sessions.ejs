@@ -12,7 +12,8 @@
             <input type="submit" value="Submit" class="btn">
         </form>
     </section>
-        <% for(var i=0;i<arr.length;i++){ %>
+        <% for(var i=0;i<arr.length-1;i+=2){ %>
+            <div class="session-filter">
             <div class="card">
                 <div class="card-header">
                     <h2><%= arr[i].speaker %></h2>
@@ -21,8 +22,21 @@
                     <p><strong>Mode:</strong> <%= arr[i].mode %></p>
                     <p><strong>Duration:</strong> <%= arr[i].duration %></p>
                     <p><strong>Session Topic:</strong> <%= arr[i].topic %></p>
+                    <p><strong>Speaker details:</strong> <%= arr[i].speaker_details %></p>
                 </div>
             </div>
+            <div class="card">
+                <div class="card-header">
+                    <h2><%= arr[i+1].speaker %></h2>
+                </div>
+                <div class="card-body">
+                    <p><strong>Mode:</strong> <%= arr[i+1].mode %></p>
+                    <p><strong>Duration:</strong> <%= arr[i+1].duration %></p>
+                    <p><strong>Session Topic:</strong> <%= arr[i+1].topic %></p>
+                    <p><strong>Speaker details:</strong> <%= arr[i+1].speaker_details %></p>
+                </div>
+            </div>
+        </div>
         <% } %>
 </div>
 <%- include('partials/footer.ejs') %>
