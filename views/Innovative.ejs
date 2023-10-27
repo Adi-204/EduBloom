@@ -1,12 +1,67 @@
 <%- include('partials/header.ejs') %>
-<h1>Available Videos</h1>
+<div class="course-container">
+  <div class="Course-text-container">
+    <h2>Innovative Teaching Practices</h2>
+    <p>
+        "Innovative Teaching Technique" course can empower educators to embrace and adapt to the rapidly evolving educational landscape, fostering creativity, engagement, and improved learning outcomes for their students.
+    </p>
+    <p>Rating 4.6/5 stars</p>
+    <div class="btn">Buy this course for $9</div>
+  </div>
+  <div class="Course-image-container">
     <ul>
-        <% v.forEach(video => { %>
-            <li>
-                <iframe width="560" height="315" src="<%= video.url %>" frameborder="0" allowfullscreen></iframe>
-            </li>
-        <% }); %>
+      <% v.forEach(video => { %>
+      <li>
+        <iframe
+          width="260"
+          height="200"
+          src="<%= video.url %>"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </li>
+      <% }); %>
     </ul>
+  </div>
+</div>
+<div class="What-U-Will-Learn">
+    <h4>What You Will Learn</h4>
+    <ul>
+        <li>Learn how to leverage digital platforms and resources to create dynamic and interactive learning experiences</li>
+        <li>Gain insights into innovative pedagogical methods and strategies that promote active learning, critical thinking, and problem-solving</li>
+        <li>Discover how to design and implement blended learning environments that combine in-person and online instruction </li>
+        <li>Explore the flipped classroom model and learn how to flip your own lessons to maximize in-class engagement and active learning</li>
+    </ul>
+</div>
+<div class="Prerequisites">
+<h4>Prerequisites</h4>
+<p>Participants should have a background in education, such as a bachelor's degree in education or a related field. This ensures a foundational understanding of teaching methods and pedagogy.</p>
+</div>
 
+<div class="Testimonials-block">
+    <h2>Educators Love EduBloom</h2>
+    <div class="Testimonials">
+      <div class="Testimonial-1">
+        <p>
+            "I recently completed the 'Innovative Teaching Technique' course, and I must say it has transformed the way I approach education. This course has been a game-changer in my teaching career. I gained a deep understanding of modern teaching methods and educational technology, and I learned how to create engaging and interactive learning experiences for my students."
+        </p>
+        <p class="T-Name">~Joseph</p>
+      </div>
+      <div class="Testimonial-1">
+        <p>
+            "The course instructors were incredibly knowledgeable and passionate about their subject matter. They provided practical insights, real-world examples, and a wealth of resources that I could immediately apply in my classroom. The hands-on activities and group discussions were both fun and enlightening."
+        </p>
+        <p class="T-Name">~Richard Son</p>
+      </div>
+      <div class="Testimonial-1">
+        <p>
+            "I appreciated the emphasis on inclusive teaching practices, which have made my classroom more accessible and welcoming to all learners. The course also emphasized data-driven decision-making, enabling me to better tailor my teaching methods to meet the diverse needs of my students."
+        </p>
+        <p class="T-Name">
+          ~Lisa Beth
+        </p>
+      </div>
+    </div>
+</div>
 
 <%- include('partials/footer.ejs') %>
