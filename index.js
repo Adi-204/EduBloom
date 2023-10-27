@@ -9,64 +9,21 @@ import 'dotenv/config';
 
 const app = express();
 const port = 3000;
-var sessions = [
-    {
-        topic:"Level up your chemistry teaching",
-        mode:"Offline",
-        duration:"2hr",
-        speaker:"Alcha Verma",
-        speaker_details:"Expertise in Gamified Chemistry teaching"
-    },
-    {
-        topic:"Level up your Mathematics teaching",
-        mode:"Online",
-        duration:"3hr",
-        speaker:"Sangeeta Gupta",
-        speaker_details:"She is expert at teaching Mathematics with usage of AI tools"
-    },
-    {
-        topic:"How to increase quailty of Content",
-        mode:"Offline",
-        duration:"4hr",
-        speaker:"Rohan Kumar",
-        speaker_details:"Expert at recording online lectures with 5 Million Subscriber on Youtube"
-    },
-    {
-        topic:"How to Gamify Coding",
-        mode:"Offline",
-        duration:"2hr",
-        speaker:"Harsh Singh",
-        speaker_details:"Expert in making life of students easy."
-    },
-    {
-        topic:"Level up your Social Media Portfolio",
-        mode:"Online",
-        duration:"2.5hr",
-        speaker:"Sandeep Verma",
-        speaker_details:"Expert at building personal social portfolio"
-    },
-    {
-        topic:"Digital Marketing",
-        mode:"Online",
-        duration:"1.5hr",
-        speaker:"Sandeep Verma",
-        speaker_details:"Expert at how to promote your courses online and increse more engaement"
-    },
-    {
-        topic:"Remove fear of Camera Shyness",
-        mode:"Online",
-        duration:"3hr",
-        speaker:"Soham Sign",
-        speaker_details:"Expert at how to remove fear of camera shyness and boost your confidence to record lectures"
-    },
-    {
-        topic:"Level up your physics teaching",
-        mode:"Online",
-        duration:"2.5hr",
-        speaker:"Walter Lewin",
-        speaker_details:"He is expert at teaching difficult concepts and provide quailty content to students"
-    }
-];
+
+mongoose.connect('mongodb://127.0.0.1:27017/eduBloomSessionsDB', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+const sessionSchema = new mongoose.Schema({
+    topic: String,
+    mode: String,
+    duration: String,
+    speaker: String,
+    speaker_details: String,
+});
+
+const Session = mongoose.model('Session', sessionSchema);
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -78,8 +35,6 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
-
-mongoose.connect('mongodb://127.0.0.1:27017/eduBloomUsersDB');
 
 const userSchema = new mongoose.Schema({
     username:String,
@@ -112,21 +67,33 @@ app.get('/signup',(req,res)=>{
     res.render('signup');
 });
 
-app.get('/sessions',(req,res)=>{
-    res.render('sessions',{arr:sessions});
+app.get('/sessions', async (req, res) => {
+    try {
+        const sessions = await Session.find({});
+        res.render('sessions', { arr: sessions });
+    } catch (err) {
+        console.error('Error retrieving sessions:', err);
+        res.status(500).send('Error retrieving sessions');
+    }
 });
 
 app.get('/about',(req,res)=>{
     res.render('about');
 });
 
-app.post('/process-filter',(req,res)=>{
-    const modefill = req.body.mode;
-    if(modefill==="all"){
-        res.render('sessions',{arr:sessions});
-    }else{
-        const newSessions = sessions.filter((ele)=> ele.mode === modefill);
-        res.render('sessions',{arr:newSessions});
+app.post('/process-filter', async (req, res) => {
+    const modeFilter = req.body.mode;
+    try {
+        if (modeFilter === 'all') {
+            const sessions = await Session.find({});
+            res.render('sessions', { arr : sessions });
+        } else {
+            const filteredSessions = await Session.find({ mode: modeFilter });
+            res.render('sessions', { arr: filteredSessions });
+        }
+    } catch (err) {
+        console.error('Error retrieving or filtering sessions:', err);
+        res.status(500).send('Error retrieving or filtering sessions');
     }
 });
 

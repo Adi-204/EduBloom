@@ -368,3 +368,7 @@ hr{
     justify-content: center;
     align-items: center;
 }
+.session-filter{
+    display: flex;
+    justify-content: space-evenly;
+}
