@@ -384,3 +384,8 @@ hr{
     font-size: 24px;
 }
 
+.session-filter{
+    display: flex;
+    justify-content: space-evenly;
+}
+
