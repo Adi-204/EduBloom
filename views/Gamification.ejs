@@ -1,12 +1,66 @@
 <%- include('partials/header.ejs') %>
-<h1>Available Videos</h1>
+<div class="course-container">
+  <div class="Course-text-container">
+    <h2>Gamification in Education</h2>
+    <p>
+       Gamification in education will help increase student engagement and create long term motivation.
+    </p>
+    <p>Rating 4.6/5 stars</p>
+    <div class="btn">Buy this course for $15</div>
+  </div>
+  <div class="Course-image-container">
     <ul>
-        <% v.forEach(video => { %>
-            <li>
-                <iframe width="560" height="315" src="<%= video.url %>" frameborder="0" allowfullscreen></iframe>
-            </li>
-        <% }); %>
+      <% v.forEach(video => { %>
+      <li>
+        <iframe
+          width="260"
+          height="200"
+          src="<%= video.url %>"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </li>
+      <% }); %>
     </ul>
+  </div>
+</div>
+<div class="What-U-Will-Learn">
+    <h4>What You Will Learn</h4>
+    <ul>
+        <li>Student engagement strategies</li>
+        <li>Technology Integration for better gamification</li>
+        <li>Data analysis in gamified learning</li>
+    </ul>
+</div>
+<div class="Prerequisites">
+<h4>Prerequisites</h4>
+<p>Having good knowledge about your subject is essential for creating a better gamified experience</p>
+</div>
 
+<div class="Testimonials-block">
+    <h2>Educators Love EduBloom</h2>
+    <div class="Testimonials">
+      <div class="Testimonial-1">
+        <p>
+            "As an educator, I knew I needed to upskill in technology. The A to Z Course is the perfect solution. It's a comprehensive journey into the tech world, and the supportive community of educators is a huge bonus. I now feel tech-savvy and confident in my teaching."
+        </p>
+        <p class="T-Name">~Emily Williams</p>
+      </div>
+      <div class="Testimonial-1">
+        <p>
+            "This Course for Educators has been a game-changer for me. It's a comprehensive program that equips educators with the technical skills needed for online teaching. I now create engaging and high-quality online content, making my teaching more effective and impactful."
+        </p>
+        <p class="T-Name">~Ariana Gomez</p>
+      </div>
+      <div class="Testimonial-1">
+        <p>
+            "This course is a game-changer for educators. It's not just about learning technical skills; it's about becoming a more effective, modern educator. I can't recommend it enough for anyone in education."
+        </p>
+        <p class="T-Name">
+          ~Robert Shakespeare 
+        </p>
+      </div>
+    </div>
+</div>
 
 <%- include('partials/footer.ejs') %>
