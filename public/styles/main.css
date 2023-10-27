@@ -380,9 +380,11 @@ hr{
 .course1>p{
     text-align: center;
     color: white;
-    
+    font-family: 'Lora', serif;
 }
-
+section{
+    padding-top: 20px;
+}
 .Container{
     display: flex;
     justify-content: space-evenly;
@@ -405,8 +407,8 @@ hr{
 .course1 a{
     text-decoration: none;
     color: white;
-    font-weight: bold;
-    font-size: 24px;
+    font-size: 28px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .session-filter{
@@ -422,8 +424,6 @@ hr{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding-bottom: 15px; */
-    margin: 20px;
     background-color: rgb(44, 44, 83);
     color: white;
    
