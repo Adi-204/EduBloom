@@ -1,5 +1,29 @@
 <%- include('partials/header.ejs') %>
-
-
-
+<div class="session-container">
+    <section class="filter">
+        <h2>Filter by Mode:</h2>
+        <form action="/process-filter" method="POST">
+            <select id="platform-filter" name="mode">
+                <option value="none" selected>None</option>
+                <option value="all">All</option>
+                <option value="Online">Webinar</option>
+                <option value="Offline">Offline</option>
+            </select>
+            <input type="submit" value="Submit" class="btn">
+        </form>
+    </section>
+        <% for(var i=0;i<arr.length;i++){ %>
+            <div class="card">
+                <div class="card-header">
+                    <h2><%= arr[i].speaker %></h2>
+                </div>
+                <div class="card-body">
+                    <p><strong>Mode:</strong> <%= arr[i].mode %></p>
+                    <p><strong>Duration:</strong> <%= arr[i].duration %></p>
+                    <p><strong>Session Topic:</strong> <%= arr[i].topic %></p>
+                </div>
+            </div>
+        <% } %>
+</div>
 <%- include('partials/footer.ejs') %>
+
