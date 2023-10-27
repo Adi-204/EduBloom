@@ -1,15 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
 *{
     padding: 0;
     margin: 0;
-    font-family: sans-serif;
-    
 }
 body{
     background-color: whitesmoke;
 }
 header{
     background-color: #fff;
+}
+h2{
+    font-family: 'Montserrat', sans-serif;
 }
 .app {
     padding: 15px;
@@ -18,10 +22,10 @@ header{
 }
 .app a{
     text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
 }
 .nav{
     display: flex;
-    
     justify-content: space-between;
     background-color: white;
     height: 75px;
@@ -32,17 +36,18 @@ header{
     padding-right: 30px;
     font-size: 20px;
     padding-top: 10px;
-    font-family: 'Inter', sans-serif;
 }
-
 .nav-items li{
     list-style: none;
     padding: 15px;
 }
+p{
+    font-family: 'Roboto', sans-serif;
+}
 .nav-items li a{
     text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
 }
-
 .sign{
     font-family: Archia,sans-serif;
     text-align: center;
@@ -102,11 +107,11 @@ button[type="submit"] {
     cursor: pointer;
     
 }
-
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
+    font-family: 'Lora', serif;
     padding: 10px;
     width: 100%;
     padding-top:30px; 
@@ -248,12 +253,16 @@ hr{
 }
 .Testimonial-1{
     padding: 30px;
+    font-family: 'Playfair Display', serif;
     width: 30%;
     border: 2px solid black;
     border-radius: 30px;
-    
+    font-style: italic;
+    line-height: 1.4;
 }
 .T-Name{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
     text-align: right;
 }
 .Testimonials-block h2{
@@ -290,6 +299,7 @@ hr{
 }
 .USP-Remove{
     text-align: left;
+    font-family: 'Montserrat', sans-serif;
 }
 .btn{
     background-color: #3498db;
@@ -341,19 +351,14 @@ hr{
     padding: 20px;
     
 }
-
 .card-body p {
     margin: 0;
 }
-
-
 .course1{
     width: 40%;
-    
     border:2px solid black ;
     background-color: #232D3F;
     border-radius: 30px;
-    
 }
 .P-image{
     display:flex;
