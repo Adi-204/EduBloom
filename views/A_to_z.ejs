@@ -1,7 +1,15 @@
 <%- include('partials/header.ejs') %>
-<p>
-    Hello World
-</p>
+
+<h1>Available Videos</h1>
+    <ul>
+        <% v.forEach(video => { %>
+            <li>
+                <iframe width="560" height="315" src="<%= video.url %>" frameborder="0" allowfullscreen></iframe>
+            </li>
+        <% }); %>
+    </ul>
 
 
 <%- include('partials/footer.ejs') %>
+
+
