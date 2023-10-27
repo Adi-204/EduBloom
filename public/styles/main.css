@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -20,6 +21,7 @@ header{
 }
 .nav{
     display: flex;
+    
     justify-content: space-between;
     background-color: white;
     height: 75px;
@@ -30,7 +32,9 @@ header{
     padding-right: 30px;
     font-size: 20px;
     padding-top: 10px;
+    font-family: 'Inter', sans-serif;
 }
+
 .nav-items li{
     list-style: none;
     padding: 15px;
@@ -106,18 +110,21 @@ footer {
     padding: 10px;
     width: 100%;
 }
-
+.First-Block{
+    display: flex;
+    justify-content: space-evenly;
+}
 .First-Block-Content{
     text-align: center;
-    display: inline-block;
+    
     padding:50px;
 }
 #First-Block-image{
-    float: right;
+    
     height: 300px;
     padding-right:50px ;
     padding-top: 20px;
-}
+} 
 .Content-Appreciation-Text{
     display: inline-block;
     text-align: center;
@@ -183,7 +190,7 @@ hr{
 .Mission-container {
     background-color: #E7EFF6;
     padding-left: 100px;
-    padding-top: 30px;
+    margin-top: 30px;
 }
 .Mission-container-Text {
     clear: both;
@@ -242,6 +249,7 @@ hr{
     padding: 30px;
     width: 30%;
     border: 2px solid black;
+    border-radius: 30px;
     
 }
 .T-Name{
@@ -252,6 +260,7 @@ hr{
 }
 .Testimonials-block{
     background-color: #cfcedd;
+    padding-top: 20px;
 }
 .footer{
     display: flex;
@@ -302,21 +311,22 @@ hr{
 }
 .card {
     border: 1px solid #ccc;
-    border-radius: 5px;
     width: 300px;
     margin: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     background-color: #fff;
+    border-radius: 15px;
 }
 
 .card-header {
-    background-color: #333;
+    background-color: rgb(44, 44, 83);
     color: #fff;
     text-align: center;
-    padding: 10px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
+    padding: 10px; 
+     /* border-top-left-radius: 15px;
+     border-top-right-radius: 15px;  */
+     border-radius: 15px;
+ } 
 
 .card-header h2 {
     margin: 0;
@@ -324,6 +334,7 @@ hr{
 
 .card-body {
     padding: 20px;
+    
 }
 
 .card-body p {
@@ -336,7 +347,7 @@ hr{
     
     border:2px solid black ;
     background-color: #232D3F;
-    border-radius: 15px;
+    border-radius: 30px;
     
 }
 .P-image{
@@ -436,9 +447,12 @@ hr{
     width: 40%;
 }
 .What-U-Will-Learn{
+    padding: 20px;
     border: 2px solid black;
     width: 50%;
     margin-left: 155px;
+    border-radius: 30px;
+    background-color: #9fd7fc;
 }
 .Prerequisites{
     margin: 55px;
