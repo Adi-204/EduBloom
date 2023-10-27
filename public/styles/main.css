@@ -46,11 +46,16 @@ header{
     font-weight: 700;
     padding-bottom: 20px;
     padding-top: 20px;
+    color: white;
 }
 .signcontainer{
     height: 100vh;
-    background-color: #f2f2f2; /* Light gray background */
+    
+
     font-family: Arial, sans-serif;
+    position: absolute;
+    top: 200px;
+    left: 500px;
 }
 .sign-form {
     max-width: 400px;
@@ -88,10 +93,11 @@ button[type="submit"] {
     background-color: #3498db;
     color: #fff;
     padding: 10px 20px;
-    margin-top: 10px;
+    margin: 15px;
     border: none;
     border-radius: 20px;
     cursor: pointer;
+    
 }
 
 footer {
@@ -386,4 +392,38 @@ hr{
     display: flex;
     justify-content: space-evenly;
 }
+.session-filter-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.session-motivation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding-bottom: 15px; */
+    margin: 20px;
+    background-color: rgb(44, 44, 83);
+    color: white;
+   
+}
 
+#platform-filter {
+    width: 150px; /* Set the width as desired */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    font-size: 16px;
+    
+}
+
+/* Style for the select options */
+#platform-filter option {
+    font-size: 14px;
+}
+.Session-space{
+    padding-left: 40px;
+}
+.session-container>.session-filter-container>filter>h4{
+    text-align: center;
+}

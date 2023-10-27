@@ -14,7 +14,6 @@ mongoose.connect('mongodb://127.0.0.1:27017/eduBloomSessionsDB', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
-
 const sessionSchema = new mongoose.Schema({
     topic: String,
     mode: String,
@@ -22,6 +21,7 @@ const sessionSchema = new mongoose.Schema({
     speaker: String,
     speaker_details: String,
 });
+
 
 const Session = mongoose.model('Session', sessionSchema);
 
