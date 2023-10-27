@@ -1,7 +1,19 @@
 <%- include('partials/header.ejs') %>
+<div class="session-motivation">
+    <img style="float: left; " src="https://img.freepik.com/free-vector/online-education-teacher-students-webinar-via-video-conference-internet-connection-female-tutor-conduct-lesson-through-laptop-screen-people-distant-school-training-line-art-vector-illustration_107791-10592.jpg" alt="">
+    <div class="Session-space"><h2>Unlock Your Future: Explore Our Exciting Lineup of Upcoming Webinars!</h2>
+    <ul>
+        <li>Professional Development</li>
+        <li>Networking</li>
+        <li>Connect from anywhere in the world</li>
+        <li>Recording Availability</li>
+    </ul>
+    </div>
+</div>
 <div class="session-container">
+    <div class="session-filter-container">
     <section class="filter">
-        <h2>Filter by Mode:</h2>
+        <h4>Filter by Mode</h4>
         <form action="/process-filter" method="POST">
             <select id="platform-filter" name="mode">
                 <option value="none" selected>None</option>
@@ -12,27 +24,28 @@
             <input type="submit" value="Submit" class="btn">
         </form>
     </section>
+    </div>
         <% for(var i=0;i<arr.length-1;i+=2){ %>
             <div class="session-filter">
             <div class="card">
                 <div class="card-header">
-                    <h2><%= arr[i].speaker %></h2>
+                    <h2><%= arr[i].topic %></h2>
                 </div>
                 <div class="card-body">
                     <p><strong>Mode:</strong> <%= arr[i].mode %></p>
                     <p><strong>Duration:</strong> <%= arr[i].duration %></p>
-                    <p><strong>Session Topic:</strong> <%= arr[i].topic %></p>
+                    <p><strong>Session Topic:</strong> <%= arr[i].speaker %></p>
                     <p><strong>Speaker details:</strong> <%= arr[i].speaker_details %></p>
                 </div>
             </div>
             <div class="card">
                 <div class="card-header">
-                    <h2><%= arr[i+1].speaker %></h2>
+                    <h2><%= arr[i+1].topic %></h2>
                 </div>
                 <div class="card-body">
                     <p><strong>Mode:</strong> <%= arr[i+1].mode %></p>
                     <p><strong>Duration:</strong> <%= arr[i+1].duration %></p>
-                    <p><strong>Session Topic:</strong> <%= arr[i+1].topic %></p>
+                    <p><strong>Session Topic:</strong> <%= arr[i+1].speaker %></p>
                     <p><strong>Speaker details:</strong> <%= arr[i+1].speaker_details %></p>
                 </div>
             </div>

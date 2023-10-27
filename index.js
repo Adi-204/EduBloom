@@ -14,7 +14,6 @@ mongoose.connect('mongodb://127.0.0.1:27017/eduBloomSessionsDB', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
-
 const sessionSchema = new mongoose.Schema({
     topic: String,
     mode: String,
@@ -23,7 +22,15 @@ const sessionSchema = new mongoose.Schema({
     speaker_details: String,
 });
 
+
 const Session = mongoose.model('Session', sessionSchema);
+
+const videoSchema = new mongoose.Schema({
+    title: String,
+    url: String,
+});
+
+const Video = mongoose.model('Video', videoSchema);
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
