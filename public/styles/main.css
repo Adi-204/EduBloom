@@ -427,3 +427,23 @@ hr{
 .session-container>.session-filter-container>filter>h4{
     text-align: center;
 }
+.course-container{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 40px;
+}
+.Course-text-container{
+    width: 40%;
+}
+.What-U-Will-Learn{
+    border: 2px solid black;
+    width: 50%;
+    margin-left: 155px;
+}
+.Prerequisites{
+    margin: 55px;
+    padding-left: 100px;
+}
+.Course-image-container li{
+    list-style-type:none;
+}
