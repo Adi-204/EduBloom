@@ -287,5 +287,44 @@ hr{
 #Homebutton:hover {
     background-color: #1d6fa5; /* Darker shade of blue on hover */
 }
+.Motivational_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #272323;
+}
 
 
+.course1{
+    width: 40%;
+    
+    border:2px solid black ;
+    
+}
+.P-image{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.P-Name{
+    text-align: center;
+}
+.C-Name a{
+    display: block;
+}
+.C-Name{
+    
+    text-align: center;
+}
+.course1>p{
+    text-align: center;
+    
+}
+
+.Container{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+}
