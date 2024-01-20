@@ -44,7 +44,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(session({
-    secret: process.env.SECRETE_KEY,
+    secret: process.env.SECRET_KEY,
     resave: false,
     saveUninitialized: true,
 }));
@@ -217,6 +217,6 @@ app.post('/signup',(req,res)=>{
     });
 });
 app.listen(port,()=>{
-    console.log(`Listening on port ${port}`)
+    console.log(`Server is running on : http://localhost:${port}`)
 });
 
